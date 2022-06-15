@@ -1,0 +1,21 @@
+#include Servo.h
+
+Servo SERVO;
+
+int analog_value;
+int angle;
+
+void setup() {
+  SERVO.attach(9);
+
+}
+
+void loop() {
+  analog_value = analogRead(0);
+  angle = map(analog_value, 0, 1023, 0, 180);
+  SERVO.write(angle);
+  
+  
+  
+  
+}

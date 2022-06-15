@@ -1,0 +1,50 @@
+boolean button1;
+boolean button2;
+boolean button3;
+boolean button4;
+int prvi = 0;
+int drugi = 0;
+int treci = 0;
+int cetvrti = 0;
+
+void setup() {
+  pinMode(8, INPUT);
+  pinMode(9, INPUT);
+  pinMode(10, INPUT);
+  pinMode(11, INPUT);
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+}
+void loop() {
+  
+    button1 = digitalRead(11);
+    button2 = digitalRead(10);
+    button3 = digitalRead(9);
+    button4 = digitalRead(8);
+    if(button1 == HIGH)
+    {
+      prvi = 1;
+      digitalWrite(2,HIGH);
+    } 	
+  
+  	if(button2 == HIGH)
+    {
+      drugi = 1;
+      digitalWrite(12,HIGH);
+    } 
+  
+  	if(button3 == HIGH)
+    {
+      treci = 1;
+      digitalWrite(13,HIGH);
+    } 
+  
+  	if(button4 == HIGH)
+    {
+      cetvrti = 1;
+    } 
+  if(cetvrti == 1 && treci == 1 && drugi == 1)
+      digitalWrite(3,HIGH);
+                   
+}

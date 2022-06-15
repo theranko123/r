@@ -1,0 +1,50 @@
+int Analog_value;
+
+void setup() {
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+
+}
+
+void loop() {
+    Analog_value = analogRead(0);
+    if (Analog_value  200) {
+      digitalWrite(2, HIGH);
+
+    } else {
+      digitalWrite(2, LOW);
+
+    }
+    if (Analog_value = 200 && Analog_value  400) {
+      digitalWrite(3, HIGH);
+
+    } else {
+      digitalWrite(3, LOW);
+
+    }
+    if (Analog_value = 400 && Analog_value  600) {
+      digitalWrite(4, HIGH);
+
+    } else {
+      digitalWrite(4, LOW);
+
+    }
+    if (Analog_value = 600 && Analog_value  800) {
+      digitalWrite(5, HIGH);
+
+    } else {
+      digitalWrite(5, LOW);
+
+    }
+    if (Analog_value = 800 && Analog_value  1000) {
+      digitalWrite(6, HIGH);
+
+    } else {
+      digitalWrite(6, LOW);
+
+    }
+
+}

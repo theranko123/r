@@ -1,0 +1,21 @@
+#include <Servo.h>
+
+Servo SERVO;
+
+
+void setup() {
+  SERVO.attach(9);
+
+}
+
+void loop() {
+  
+  
+  for (int ugao = 1; ugao <= 180; ++ugao) {
+    	SERVO.write(ugao);delay(20);
+    }
+  
+  for (int ugao = 180; ugao >= 0; --ugao) {
+    	SERVO.write(ugao);delay(20);
+    }
+}
